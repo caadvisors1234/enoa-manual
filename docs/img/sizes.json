@@ -1,0 +1,230 @@
+{
+  "bulk/screen.webp": [
+    830,
+    770
+  ],
+  "concept/item.webp": [
+    1060,
+    500
+  ],
+  "concept/save.webp": [
+    196,
+    72
+  ],
+  "coupon/content.webp": [
+    528,
+    553
+  ],
+  "coupon/menu.webp": [
+    172,
+    434
+  ],
+  "coupon/photo.webp": [
+    312,
+    128
+  ],
+  "coupon/target.webp": [
+    312,
+    419
+  ],
+  "coupon/title.webp": [
+    530,
+    128
+  ],
+  "faq/add.webp": [
+    1060,
+    724
+  ],
+  "faq/save.webp": [
+    183,
+    72
+  ],
+  "hours/save.webp": [
+    183,
+    72
+  ],
+  "hours/spec.webp": [
+    1052,
+    478
+  ],
+  "hours/text.webp": [
+    1108,
+    198
+  ],
+  "login/form.webp": [
+    352,
+    561
+  ],
+  "login/logout.webp": [
+    214,
+    151
+  ],
+  "menu/category.webp": [
+    312,
+    478
+  ],
+  "menu/extra-menu.webp": [
+    172,
+    485
+  ],
+  "menu/extra.webp": [
+    530,
+    1073
+  ],
+  "menu/menu.webp": [
+    172,
+    485
+  ],
+  "menu/order.webp": [
+    312,
+    162
+  ],
+  "menu/price.webp": [
+    528,
+    270
+  ],
+  "menu/title.webp": [
+    530,
+    128
+  ],
+  "reason/detail.webp": [
+    528,
+    741
+  ],
+  "reason/list.webp": [
+    810,
+    588
+  ],
+  "reservation/card.webp": [
+    1110,
+    722
+  ],
+  "reservation/floating.webp": [
+    1110,
+    333
+  ],
+  "reservation/save.webp": [
+    195,
+    72
+  ],
+  "reservation/url.webp": [
+    1110,
+    541
+  ],
+  "review/box.webp": [
+    530,
+    687
+  ],
+  "review/category.webp": [
+    312,
+    326
+  ],
+  "review/menu.webp": [
+    172,
+    503
+  ],
+  "review/text.webp": [
+    530,
+    590
+  ],
+  "screen/dashboard.webp": [
+    1110,
+    521
+  ],
+  "screen/menu.webp": [
+    168,
+    688
+  ],
+  "staff/basic.webp": [
+    530,
+    489
+  ],
+  "staff/category.webp": [
+    312,
+    255
+  ],
+  "staff/menu.webp": [
+    172,
+    332
+  ],
+  "staff/photo.webp": [
+    312,
+    128
+  ],
+  "staff/title.webp": [
+    530,
+    128
+  ],
+  "staff/top-photo.webp": [
+    810,
+    478
+  ],
+  "style/category.webp": [
+    312,
+    418
+  ],
+  "style/crop.webp": [
+    810,
+    501
+  ],
+  "style/edit.webp": [
+    307,
+    298
+  ],
+  "style/media.webp": [
+    840,
+    560
+  ],
+  "style/menu.webp": [
+    172,
+    412
+  ],
+  "style/photo.webp": [
+    530,
+    447
+  ],
+  "style/publish.webp": [
+    312,
+    290
+  ],
+  "style/staff.webp": [
+    312,
+    202
+  ],
+  "style/title.webp": [
+    530,
+    128
+  ],
+  "top/fv.webp": [
+    1110,
+    609
+  ],
+  "top/items.webp": [
+    538,
+    326
+  ],
+  "top/placement.webp": [
+    312,
+    109
+  ],
+  "top/save.webp": [
+    195,
+    72
+  ],
+  "top/sections.webp": [
+    1110,
+    882
+  ],
+  "unpublish/draft.webp": [
+    312,
+    381
+  ],
+  "unpublish/restore.webp": [
+    821,
+    290
+  ],
+  "unpublish/trash.webp": [
+    312,
+    290
+  ]
+}

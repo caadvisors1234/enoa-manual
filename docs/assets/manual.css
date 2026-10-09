@@ -1,0 +1,247 @@
+/*
+ * 見た目は白地と濃いグレーの文字、アクセントは 1 色だけ。
+ * 絵文字・グラデーション・影の強い箱・アイコンの飾りは使わない。
+ */
+:root,
+[data-md-color-primary="custom"],
+[data-md-color-accent="custom"] {
+  --manual-text: #333333;
+  --manual-muted: #6b6b6b;
+  --manual-line: #e3e0dc;
+  --manual-accent: #7a6450;      /* 店舗のブランドカラー #a58f79 を、白地で読める濃さにしたもの */
+  --manual-accent-soft: #f6f3ef;
+
+  --md-text-font: "Noto Sans JP";
+  --md-primary-fg-color: #ffffff;
+  --md-primary-fg-color--light: #ffffff;
+  --md-primary-fg-color--dark: #ffffff;
+  --md-primary-bg-color: var(--manual-text);
+  --md-primary-bg-color--light: var(--manual-muted);
+  --md-accent-fg-color: var(--manual-accent);
+  --md-typeset-color: var(--manual-text);
+  --md-typeset-a-color: var(--manual-accent);
+  --md-default-fg-color--light: var(--manual-muted);
+}
+
+body {
+  font-family: "Noto Sans JP", "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ヘッダー：白地に細い線だけ */
+.md-header {
+  border-bottom: 1px solid var(--manual-line);
+  box-shadow: none;
+}
+.md-header[data-md-state="shadow"],
+.md-header--shadow {
+  box-shadow: none;
+}
+.md-header__title {
+  font-weight: 500;
+  font-size: .8rem;
+  letter-spacing: .04em;
+}
+.md-header__button.md-logo {
+  display: none;
+}
+.md-search__form {
+  background: #f4f3f1;
+  border-radius: 4px;
+}
+.md-search__input::placeholder {
+  color: var(--manual-muted);
+}
+
+/* 本文：行間を広く、幅を絞って中央に置く */
+.md-content__inner {
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.md-typeset {
+  font-size: .8rem;
+  line-height: 1.95;
+  letter-spacing: .02em;
+}
+.md-typeset h1 {
+  color: var(--manual-text);
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: .04em;
+  margin: 0 0 .6em;
+}
+.md-typeset h2 {
+  font-weight: 700;
+  font-size: 1.05rem;
+  margin: 2.4em 0 .8em;
+  padding-bottom: .4em;
+  border-bottom: 1px solid var(--manual-line);
+}
+.md-typeset h3 {
+  font-weight: 700;
+  font-size: .9rem;
+  margin: 1.8em 0 .5em;
+}
+.md-typeset a {
+  text-decoration: underline;
+  text-underline-offset: .2em;
+  text-decoration-thickness: 1px;
+}
+
+/* ページの頭の 1 行 */
+.md-typeset .lead {
+  color: var(--manual-muted);
+  font-size: .85rem;
+  margin-top: -.2em;
+}
+
+/* 手順：数字だけのシンプルな番号 */
+.md-typeset ol.steps {
+  list-style: none;
+  counter-reset: step;
+  margin: 1.2em 0 0;
+  padding: 0;
+}
+.md-typeset ol.steps > li {
+  counter-increment: step;
+  position: relative;
+  margin: 0 0 2.6em;
+  padding-left: 2.2em;
+}
+.md-typeset ol.steps > li::before {
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: -.05em;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--manual-accent);
+  line-height: 1.6;
+}
+.md-typeset ol.steps > li > p:first-child {
+  margin-top: 0;
+}
+
+/* 画面写真：細い枠線だけ。実際の画面と同じ大きさ（width 属性）で出し、本文の幅を超えたら縮める */
+.md-typeset img.shot {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border: 1px solid var(--manual-line);
+  border-radius: 3px;
+  margin: .6em 0 0;
+}
+
+/* 注意：細い線の箱 1 種類 */
+.md-typeset .admonition,
+.md-typeset .admonition.note,
+.md-typeset details {
+  border: 1px solid var(--manual-line);
+  border-left: 3px solid var(--manual-accent);
+  border-color: var(--manual-line) var(--manual-line) var(--manual-line) var(--manual-accent);
+  border-radius: 0;
+  box-shadow: none;
+  background: var(--manual-accent-soft);
+  font-size: .78rem;
+  padding: .2em 1em .4em;
+}
+.md-typeset .admonition-title {
+  background: none !important;
+  padding: .6em 0 0 !important;
+  margin: 0 !important;
+  font-weight: 700;
+  border: none;
+}
+.md-typeset .admonition-title::before {
+  display: none;
+}
+
+/* 画面の名前（「」で囲んだボタン名など）は太字にしない。読みやすさを優先する */
+.md-typeset strong {
+  font-weight: 700;
+}
+
+/* 目次（はじめにのページ） */
+.md-typeset ul.tasks {
+  list-style: none;
+  margin: .4em 0 0;
+  padding: 0;
+  border-top: 1px solid var(--manual-line);
+}
+.md-typeset ul.tasks > li {
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid var(--manual-line);
+}
+.md-typeset ul.tasks > li > a {
+  display: block;
+  padding: .75em .2em;
+  color: var(--manual-text);
+  text-decoration: none;
+}
+.md-typeset ul.tasks > li > a:hover {
+  color: var(--manual-accent);
+  background: var(--manual-accent-soft);
+}
+
+/* 左の目次 */
+.md-nav__title {
+  display: none;
+}
+.md-nav__item--section > .md-nav__link {
+  color: var(--manual-muted);
+  font-size: .62rem;
+  font-weight: 500;
+  letter-spacing: .08em;
+}
+.md-nav__link--active,
+.md-nav__item .md-nav__link--active {
+  color: var(--manual-accent);
+  font-weight: 700;
+}
+
+/* フッター：控えめに */
+.md-footer,
+.md-footer-meta {
+  background: #ffffff;
+  color: var(--manual-muted);
+  border-top: 1px solid var(--manual-line);
+}
+.md-footer__link,
+.md-footer__title,
+.md-copyright {
+  color: var(--manual-muted);
+}
+
+/* 写真の番号に対応するリスト。番号は、写真の上の番号と同じ赤い丸にする */
+.md-typeset ol.marks,
+.md-typeset ol.steps ol {
+  list-style: none;
+  counter-reset: mark;
+  margin: .4em 0 0;
+  padding: 0;
+}
+.md-typeset ol.marks > li,
+.md-typeset ol.steps ol > li {
+  counter-increment: mark;
+  position: relative;
+  margin: 0 0 .3em;
+  padding-left: 1.8em;
+}
+.md-typeset ol.marks > li::before,
+.md-typeset ol.steps ol > li::before {
+  content: counter(mark);
+  position: absolute;
+  left: 0;
+  top: .38em;
+  width: 1.25em;
+  height: 1.25em;
+  border-radius: 50%;
+  background: #d6402b;
+  color: #fff;
+  font-size: .72rem;
+  font-weight: 700;
+  line-height: 1.25em;
+  text-align: center;
+}

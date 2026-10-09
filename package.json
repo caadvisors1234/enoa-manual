@@ -1,0 +1,13 @@
+{
+  "name": "enoa-manual",
+  "private": true,
+  "type": "module",
+  "description": "管理画面マニュアルの画面写真を撮るスクリプト",
+  "scripts": {
+    "capture": "node tools/capture.mjs"
+  },
+  "devDependencies": {
+    "playwright": "^1.64.0",
+    "sharp": "^0.35.5"
+  }
+}

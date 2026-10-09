@@ -1,0 +1,69 @@
+# ほかの店舗で使うときは、site_name・site_url・copyright と docs/login.md のログイン URL を書き換え、撮影をやり直す。
+site_name: ENOA 管理画面マニュアル
+site_url: https://caadvisors1234.github.io/enoa-manual/
+copyright: ENOA hair & spa by COVER HAIR
+
+extra:
+  generator: false
+
+theme:
+  name: material
+  language: ja
+  custom_dir: overrides
+  font: false
+  icon:
+    logo: null
+  features:
+    - navigation.sections
+    - navigation.footer
+    - search.suggest
+  palette:
+    scheme: default
+    primary: custom
+    accent: custom
+
+extra_css:
+  - assets/manual.css
+
+hooks:
+  - hooks/shot_size.py
+
+plugins:
+  - search:
+      lang: ja
+  - glightbox:
+      touchNavigation: false
+      zoomable: true
+      skip_classes:
+        - no-zoom
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - admonition
+  - toc:
+      permalink: false
+
+nav:
+  - トップ: index.md
+  - はじめに:
+      - ログインしたい: login.md
+      - 画面の見かたを知りたい: screen.md
+  - よく使う作業:
+      - ヘアスタイルを載せたい: style.md
+      - スタッフを載せたい: staff.md
+      - メニューと料金を変えたい: menu.md
+      - メニューをまとめて登録したい: menu-bulk.md
+      - クーポンを載せたい: coupon.md
+      - お客様の声を載せたい: review.md
+      - 載せたものを消したい: unpublish.md
+  - ときどき使う作業:
+      - 店舗トップに載せるものを選びたい: top-items.md
+      - 店舗トップの写真を変えたい: top-photo.md
+      - 営業時間・定休日を変えたい: hours.md
+      - よくある質問を変えたい: faq.md
+      - 予約ボタンの設定を変えたい: reservation.md
+      - 選ばれる理由・コンセプトを変えたい: reason-concept.md
+  - 困ったとき:
+      - やってはいけないこと: dont.md
+      - うまくいかないとき: trouble.md
