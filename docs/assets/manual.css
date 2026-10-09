@@ -53,11 +53,13 @@ body {
   color: var(--manual-muted);
 }
 
-/* 本文：行間を広く、幅を絞って中央に置く */
+/* 本文：行間を広く、幅を絞って中央に置く。狭い画面でも左右に 16px（.8rem）の余白を残す */
 .md-content__inner {
-  max-width: 760px;
+  max-width: calc(760px + 1.6rem);
   margin-left: auto;
   margin-right: auto;
+  padding-left: .8rem;
+  padding-right: .8rem;
 }
 .md-typeset {
   font-size: .8rem;
@@ -180,6 +182,9 @@ body {
   color: var(--manual-text);
   text-decoration: none;
 }
+.md-typeset h2 + ul.tasks {
+  border-top: none;
+}
 .md-typeset ul.tasks > li > a:hover {
   color: var(--manual-accent);
   background: var(--manual-accent-soft);
@@ -244,4 +249,30 @@ body {
   font-weight: 700;
   line-height: 1.25em;
   text-align: center;
+}
+
+/* スマホ向けの案内（はじめにのページ）。パソコンでは出さない */
+.md-typeset .sp-only {
+  display: none;
+}
+
+/* スマホ：手順の字下げを詰め、写真は本文の幅いっぱいに出す */
+@media screen and (max-width: 44.984375em) {
+  .md-typeset h1 {
+    font-size: 1.3rem;
+  }
+  .md-typeset h2 {
+    margin-top: 2em;
+  }
+  .md-typeset ol.steps > li {
+    margin-bottom: 2.2em;
+    padding-left: 1.6em;
+  }
+  .md-typeset ol.steps > li img.shot {
+    margin-left: -1.6em;
+    max-width: calc(100% + 1.6em);
+  }
+  .md-typeset .sp-only {
+    display: block;
+  }
 }

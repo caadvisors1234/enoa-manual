@@ -32,7 +32,7 @@ plugins:
   - search:
       lang: ja
   - glightbox:
-      touchNavigation: false
+      touchNavigation: true   # スマホで写真を指で広げて拡大できるようにする
       zoomable: true
       skip_classes:
         - no-zoom
