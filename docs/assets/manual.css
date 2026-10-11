@@ -276,3 +276,58 @@ body {
     display: block;
   }
 }
+
+/*
+ * スマホ・タブレットの左メニュー：区分ごとに階層を開かず、全ページを 1 枚に並べる。
+ * どのページからでも、メニューを開いて 1 回押せばトップやほかの区分のページへ移れる。
+ * （Material の標準は区分の中に入り込む形で、戻るには区分の見出しの「←」を押す必要がある）
+ */
+@media screen and (max-width: 76.234375em) {
+  .md-nav--primary > .md-nav__title[for="__drawer"] {
+    display: block;
+    height: auto;
+    padding: 1rem .8rem .8rem;
+    line-height: 1.5;
+    font-size: .7rem;
+    font-weight: 500;
+    color: var(--manual-muted);
+    background-color: #ffffff;
+  }
+  .md-nav--primary > .md-nav__title .md-logo {
+    display: none;
+  }
+  .md-nav--primary .md-nav__item--section {
+    border-top: none;
+  }
+  .md-nav--primary .md-nav__item--section > .md-nav {
+    position: static;
+    display: block;
+    height: auto;
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .md-nav--primary .md-nav__item--section > .md-nav > .md-nav__list {
+    overflow: visible;
+    box-shadow: none;
+  }
+  /* 区分の名前は見出しとして出すだけ（押しても何も起きない） */
+  .md-nav--primary .md-nav__item--section > label.md-nav__link {
+    pointer-events: none;
+    padding-top: 1.4rem;
+    padding-bottom: .3rem;
+  }
+  .md-nav--primary .md-nav__item--section > label.md-nav__link .md-nav__icon {
+    display: none;
+  }
+  /* 開いているページの目次はメニューに入れず、ページへのリンクだけにする */
+  .md-nav--primary .md-nav__link[for="__toc"] {
+    display: none;
+  }
+  .md-nav--primary .md-nav__link[for="__toc"] + .md-nav__link {
+    display: flex;
+  }
+  .md-nav--primary .md-nav__link[for="__toc"] ~ .md-nav {
+    display: none;
+  }
+}
