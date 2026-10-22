@@ -423,7 +423,10 @@ export const shots = [
       return {
         viewport: 'full',
         area: panel,
-        marks: [{ target: panel.getByText('画像を変更', { exact: true }).first() }],
+        marks: [
+          { target: panel.getByText('画像を変更', { exact: true }).first(), label: '1' },
+          { target: panel.locator('.fc-top-admin__sp-media').first().getByText('画像を変更', { exact: true }), label: '2' },
+        ],
       };
     },
   },
